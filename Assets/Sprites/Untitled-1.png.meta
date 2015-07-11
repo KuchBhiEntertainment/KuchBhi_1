@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: ed67bace2f363614aa3b727e2cb428a9
-timeCreated: 1436556946
+guid: f9237656135859d499168d1909fc8227
+timeCreated: 1436628139
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: jump2_0
-    21300002: jump2_1
+    21300000: Untitled-1_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -45,29 +44,19 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 280
+  spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: jump2_0
+    - name: Untitled-1_0
       rect:
         serializedVersion: 2
-        x: 227
-        y: 1360
-        width: 619
-        height: 662
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: jump2_1
-      rect:
-        serializedVersion: 2
-        x: 947
-        y: 1404
-        width: 627
-        height: 618
+        x: 4
+        y: 989
+        width: 158
+        height: 83
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

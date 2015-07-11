@@ -1,9 +1,17 @@
 fileFormatVersion: 2
-guid: efeb78f804f418a41b96ffdf858f60e8
-timeCreated: 1436545281
+guid: 78dbebe76692178498f2fc18b9429288
+timeCreated: 1436641702
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: ESKIMO_0
+    21300002: ESKIMO_1
+    21300004: ESKIMO_2
+    21300006: ESKIMO_3
+    21300008: ESKIMO_4
+    21300010: ESKIMO_5
+    21300012: ESKIMO_6
+    21300014: ESKIMO_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,14 +38,14 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,7 +56,87 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: ESKIMO_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 125
+        width: 82
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ESKIMO_1
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 125
+        width: 87
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ESKIMO_2
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 125
+        width: 72
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ESKIMO_3
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 125
+        width: 67
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ESKIMO_4
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 82
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ESKIMO_5
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 87
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ESKIMO_6
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 0
+        width: 72
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ESKIMO_7
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 0
+        width: 68
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

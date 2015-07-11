@@ -7,14 +7,9 @@ public class PenguinController : MonoBehaviour
     
     public Transform groundCheck;
 
-    RaycastHit2D interacted;
-
     float jumpTime;
     [SerializeField]
     float jumpForce = 600f;
-    [SerializeField]
-    float jumpDelay = 0.2f;
-    bool jumped;
     float slideTime;
     [SerializeField]
     float slideDelay = 0.4f;
@@ -33,10 +28,11 @@ public class PenguinController : MonoBehaviour
 
     void ChangeColliderTransform()
     {
-        changedCirCollidOffset = new Vector2(-0.44f, 0.00f);
-        changedBoxCollidOffset = new Vector2(-0.01f, -0.01421808f);
-        changedBoxCollidSize = new Vector2(0.1451377f, 0.1384363f);
+        changedCirCollidOffset = new Vector2(-0.79f, -0.06f);
+        changedBoxCollidOffset = new Vector2(0.02f, -0.10f);
+        changedBoxCollidSize = new Vector2(1.151735f, 0.8388399f);
         GetComponent<CircleCollider2D>().offset = changedCirCollidOffset;
+        GetComponent<CircleCollider2D>().radius = 0.35f;
         GetComponent<BoxCollider2D>().size = changedBoxCollidSize;
         GetComponent<BoxCollider2D>().offset = changedBoxCollidOffset;
     }
@@ -71,7 +67,6 @@ public class PenguinController : MonoBehaviour
     {
         anim.SetFloat("VerticalSpeed", GetComponent<Rigidbody2D>().velocity.y);
         transform.Translate(Vector3.right * speed * Time.deltaTime);
-        if (slide) ChangeColliderTransform();
         slideTime -= Time.deltaTime;
         if (slideTime <= 0f && slide)
         {
@@ -87,12 +82,12 @@ public class PenguinController : MonoBehaviour
         {
             anim.SetBool("Ground", false);
             GetComponent<Rigidbody2D>().AddForce(transform.up * jumpForce);
-            jumped = true;
         }
-        if (Input.GetKeyDown(KeyCode.LeftControl) && !slide && !jumped)
+        if (Input.GetKeyDown(KeyCode.LeftShift)  && grounded && !slide)
         {
             anim.SetTrigger("SlideOn");
             slide = true;
+            ChangeColliderTransform();
             slideTime = slideDelay;
         }
     }
