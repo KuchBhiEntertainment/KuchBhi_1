@@ -3,14 +3,12 @@ using System.Collections;
 
 public class HUDScript : MonoBehaviour
 {
-    public PlayerStats playerStatsScript;
     float playerScore = 0;
     public int health;
     // Update is called once per frame
 	void Update () 
     {
         playerScore += Time.deltaTime;
-        health = playerStatsScript.playerStats.Health;
 	}
    
     public void IncreaseScore(int amount)

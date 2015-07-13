@@ -27,7 +27,7 @@ public class EskimoAI : MonoBehaviour
                                                         << LayerMask.NameToLayer("Ground"));
         if (interacted) makeJump = true;
         anim.SetBool("Ground", grounded);
-        //Physics2D.IgnoreLayerCollision(8, 10);
+        //Physics2D.IgnoreLayerCollision(10,11);
     }
 
     void Movement()

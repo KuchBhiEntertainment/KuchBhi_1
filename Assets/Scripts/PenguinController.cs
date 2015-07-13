@@ -4,8 +4,9 @@ using System.Collections;
 public class PenguinController : MonoBehaviour 
 {
     bool grounded, slide;
-    
+    GameMaster gameMasterScript;
     public Transform groundCheck;
+    AudioSource audioSource;
 
     float jumpTime;
     [SerializeField]
@@ -25,6 +26,10 @@ public class PenguinController : MonoBehaviour
     Vector2 origCirColliderOff;
     Vector2 changedCirCollidOffset;
 
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.name == "Eskimo") gameMasterScript.KillPlayer();
+    }
 
     void ChangeColliderTransform()
     {
@@ -51,6 +56,9 @@ public class PenguinController : MonoBehaviour
 
     void Awake()
     {
+        GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+        gameMasterScript = Object.FindObjectOfType<GameMaster>().GetComponent<GameMaster>();
+        audioSource = GetComponent<AudioSource>();
         origBoxColliderOff = GetComponent<BoxCollider2D>().offset;
         origBoxCollidSize = GetComponent<BoxCollider2D>().size;
         origCirColliderOff = GetComponent<CircleCollider2D>().offset;
@@ -62,7 +70,12 @@ public class PenguinController : MonoBehaviour
         anim.SetBool("Ground", grounded);
         //Physics2D.IgnoreLayerCollision(8, 10);
     }
-
+    public void ChangeMyColor()
+    {
+        Debug.Log("Changed");
+        this.GetComponent<SpriteRenderer>().color = new Color(43f/255f, 117f/255f, 215f/255f,1);
+        Debug.Log("ChangedSuccessful");
+    }
     void Movement()
     {
         anim.SetFloat("VerticalSpeed", GetComponent<Rigidbody2D>().velocity.y);
@@ -80,6 +93,7 @@ public class PenguinController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && grounded && !slide)
         {
+            audioSource.Play();
             anim.SetBool("Ground", false);
             GetComponent<Rigidbody2D>().AddForce(transform.up * jumpForce);
         }

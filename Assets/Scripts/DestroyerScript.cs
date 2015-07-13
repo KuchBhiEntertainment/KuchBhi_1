@@ -5,11 +5,7 @@ public class DestroyerScript : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag=="Player")
-        {
-            Application.LoadLevel(1);
-            return;
-        }
-        if(other != null)Destroy(other.gameObject);
+        if (other.gameObject.name == "Penguin") Application.LoadLevel(1);
+        if (other != null) Destroy(other.gameObject);
     }  
 }
